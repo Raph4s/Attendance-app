@@ -16,7 +16,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             android:text="Presensi"
             android:textAlignment="center"
             android:textSize="34sp"
@@ -25,7 +25,26 @@
         <CalendarView
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
+            android:layout_height="305dp" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="171dp"
+            android:timePickerMode="spinner" />
+
+
+        <Spinner
+            android:id="@+id/spinnerCountry"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_show_alert_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
