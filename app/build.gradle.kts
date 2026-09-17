@@ -40,6 +40,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("com.applandeo:material-calendar-view:1.9.0")
 }

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="presensi_blue">#5C6BC0</color>
-    <color name="background_gray">#F0F0F0</color>
+    <color name="presensi_blue">#5661F6</color>
+    <color name="presensi_blue_light">#EEF0FE</color>
+    <color name="card_bg">#F4F4F6</color>
+    <color name="input_border">#E3E3E8</color>
+    <color name="text_hint">#A8A8A8</color>
+    <color name="text_primary">#1C1C1E</color>
+    <color name="text_result">#6E6E73</color>
 </resources>

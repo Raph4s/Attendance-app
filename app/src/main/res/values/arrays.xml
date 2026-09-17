@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="status_array">
+        <item>Hadir Tepat Waktu</item>
+        <item>Sakit</item>
+        <item>Terlambat</item>
+        <item>Izin</item>
+    </string-array>
+</resources>

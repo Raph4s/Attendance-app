@@ -5,46 +5,108 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-14dp">
+        android:padding="16dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Presensi"
-            android:textAlignment="center"
-            android:textSize="34sp"
-            />
-
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="match_parent"
-            android:layout_height="305dp" />
-
-        <TimePicker
-            android:id="@+id/timePicker"
-            android:layout_width="match_parent"
-            android:layout_height="171dp"
-            android:timePickerMode="spinner" />
-
-
-        <Spinner
-            android:id="@+id/spinnerCountry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btn_show_alert_dialog"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Submit"/>
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Presensi"
+                android:textAlignment="center"
+                android:textColor="@color/text_primary"
+                android:textSize="24sp" />
+
+            <!-- Calendar card -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_card_white"
+                android:padding="4dp">
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="289dp"
+                    android:theme="@style/ThemeOverlay.MaterialComponents.MaterialCalendar" />
+            </FrameLayout>
+
+            <!-- Time picker card -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_card_white"
+                android:padding="4dp">
+
+                <TimePicker
+                    android:id="@+id/timePicker"
+                    android:layout_width="241dp"
+                    android:layout_height="174dp"
+                    android:timePickerMode="spinner" />
+            </FrameLayout>
+
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_input_field"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:popupBackground="@drawable/bg_dropdown_popup" />
+
+            <EditText
+                android:id="@+id/etKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_input_field"
+                android:hint="Keterangan"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="@color/text_hint"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="16dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:backgroundTint="@color/presensi_blue"
+                app:cornerRadius="8dp" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/text_result"
+                android:textSize="13sp"
+                android:visibility="gone"
+                tools:text="Presensi berhasil 18 September 2023 jam 11:33 AM"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
